@@ -1,0 +1,24 @@
+{
+  "extends": ["react-app", "airbnb"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "moduleDirectory": ["node_modules", "src/"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx"]
+      }
+    ],
+    "import/no-extraneous-dependencies": [0],
+    "react/jsx-max-props-per-line": [1, { "when": "always" }],
+    "react/react-in-jsx-scope": 0,
+    "react/jsx-props-no-spreading": [0],
+    "no-param-reassign": [0],
+    "semi": ["error", "never"]
+  }
+}
