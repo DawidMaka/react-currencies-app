@@ -9,10 +9,6 @@ export const ADD_DISABLE_SUCCESS = 'ADD_DISABLE_SUCCESS'
 export const REMOVE_DISABLE_SUCCESS = 'REMOVE_DISABLE_SUCCESS'
 export const REMOVE_ALL_DISABLE_SUCCESS = 'REMOVE_ALL_DISABLE_SUCCESS'
 
-export const ADD_FAVOURITE_SUCCESS = 'ADD_FAVOURITE_SUCCESS'
-export const REMOVE_FAVOURITE_SUCCESS = 'REMOVE_FAVOURITE_SUCCESS'
-export const REMOVE_ALL_FAVOURITES_SUCCESS = 'REMOVE_ALL_FAVOURITES_SUCCESS'
-
 export const fetchCurrencies = () => (dispatch) => {
   dispatch({ type: FETCH_CURRENCIES_REQUEST })
 
@@ -34,13 +30,6 @@ export const fetchCurrencies = () => (dispatch) => {
     })
 }
 
-export const addFavourite = (item) => ({
-  type: ADD_FAVOURITE_SUCCESS,
-  payload: {
-    item,
-  },
-})
-
 export const addDisable = (item) => ({
   type: ADD_DISABLE_SUCCESS,
   payload: {
@@ -57,15 +46,4 @@ export const removeDisable = (item) => ({
 
 export const removeAllDisable = () => ({
   type: REMOVE_ALL_DISABLE_SUCCESS,
-})
-
-export const removeFavourite = (item) => ({
-  type: REMOVE_FAVOURITE_SUCCESS,
-  payload: {
-    item,
-  },
-})
-
-export const removeAllFavourites = () => ({
-  type: REMOVE_ALL_FAVOURITES_SUCCESS,
 })

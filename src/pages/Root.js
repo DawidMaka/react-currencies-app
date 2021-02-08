@@ -1,13 +1,13 @@
-import { Provider } from 'react-redux'
 import store from 'store'
-import { HashRouter, Switch, Route } from 'react-router-dom'
+import { Provider } from 'react-redux'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import MainTemplate from 'templates/MainTemplate'
-import Home from 'views/Home'
-import Favourites from 'views/Favourites'
+import Home from 'pages/Home'
+import Favourites from 'pages/Favourites'
 
 const Root = () => (
   <Provider store={store}>
-    <HashRouter basename="/">
+    <BrowserRouter>
       <MainTemplate>
         <Switch>
           <Route
@@ -21,7 +21,7 @@ const Root = () => (
           />
         </Switch>
       </MainTemplate>
-    </HashRouter>
+    </BrowserRouter>
   </Provider>
 )
 

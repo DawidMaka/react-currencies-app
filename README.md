@@ -1,4 +1,4 @@
-# Currencies App - Recruitment Task
+# Currencies App
 
 Technologies and tools I've used with this project:
 
@@ -13,34 +13,12 @@ Src: https://github.com/web-deVVV/react-currencies-app/tree/master/src
 
 ## Description
 
-We will ask you to prepare an application and use control version tool, preferably github
-repository, to track the progress of steps you have took to finish this assignment.
-Create a simple web user interface which connects with NBP web API (http://api.nbp.pl/) Your
-application should contain:
+Web user interface which connects with NBP web API (http://api.nbp.pl/). Application contain:
 
-- List of favourite currencies, which user wants to follow
-- Possibility to add currency to the list
+- List of currencies, which user wants to follow
+- Possibility to add currency to the favourite list
 - Possibility to remove one or all currencies from the list
 - Possibility to cancel currency remove - confirmation popup
-
-Deliverable solution should be build with:
-
-- React components (using redux will be a plus)
-- Use ES2015
-- Code linter and formatter
-- Tests in framework of your choice (will be a plus)
-- Setup instructions in README file
-
-## Example
-
-User wants to follow euro and dollar exchange rates. User adds these 2 currencies to the
-‘favourites’ list. Currencies appear on the list. User should be able to remove currencies from
-the list (one or all). After click on currency remove button delete confirmation popup appears.
-
-## Note
-
-We assume, that fetched currency rate is up-to-date, for this assignment we do not
-require any constant refreshing.
 
 ## Instalation 
 ```sh

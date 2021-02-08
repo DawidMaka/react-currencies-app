@@ -25,6 +25,5 @@ const Nav = () => (
     </ul>
   </nav>
 )
-Nav.displayName = 'Nav'
 
 export default Nav

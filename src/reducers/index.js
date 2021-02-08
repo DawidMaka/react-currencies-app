@@ -5,14 +5,10 @@ import {
   ADD_DISABLE_SUCCESS,
   REMOVE_DISABLE_SUCCESS,
   REMOVE_ALL_DISABLE_SUCCESS,
-  ADD_FAVOURITE_SUCCESS,
-  REMOVE_FAVOURITE_SUCCESS,
-  REMOVE_ALL_FAVOURITES_SUCCESS,
 } from 'actions'
 
 const initialState = {
   currencies: [],
-  favourites: [],
   error: null,
   status: null,
 }
@@ -36,11 +32,6 @@ const rootReducer = (state = initialState, action) => {
         status: 'error',
         error: action.payload,
       }
-    case ADD_FAVOURITE_SUCCESS:
-      return {
-        ...state,
-        favourites: [...state.favourites, action.payload.item],
-      }
     case ADD_DISABLE_SUCCESS:
       return {
         ...state,
@@ -57,16 +48,6 @@ const rootReducer = (state = initialState, action) => {
       return {
         ...state,
         currencies: state.currencies.map((item) => ({ ...item, disabled: false })),
-      }
-    case REMOVE_FAVOURITE_SUCCESS:
-      return {
-        ...state,
-        favourites: state.favourites.filter((item) => item.code !== action.payload.item.code),
-      }
-    case REMOVE_ALL_FAVOURITES_SUCCESS:
-      return {
-        ...state,
-        favourites: [],
       }
     default:
       return state

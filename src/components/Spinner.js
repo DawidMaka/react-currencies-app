@@ -8,6 +8,5 @@ const Spinner = () => (
     </div>
   </div>
 )
-Spinner.displayName = 'Spinner'
 
 export default Spinner

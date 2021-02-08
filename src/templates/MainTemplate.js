@@ -1,24 +1,41 @@
-import 'bootstrap/bootstrap.scss'
 import PropTypes from 'prop-types'
+import { removeAllDisable as removeAllDisableAction } from 'actions'
 import { withRouter } from 'react-router'
-import Heading from 'components/Heading/Heading'
-import Nav from 'components/Nav/Nav'
+import { useDispatch } from 'react-redux'
+import Nav from 'components/Nav'
 
-const MainTemplate = ({ children, location: { pathname } }) => (
-  <>
-    <header>
-      <Heading
-        tag={pathname === '/' ? 'h1' : 'span'}
-        className="sr-only"
-      >
-        Currency application
-      </Heading>
-      <Nav />
-    </header>
-    <main className="container text-center">{children}</main>
-  </>
-)
-MainTemplate.displayName = 'MainTemplate'
+const MainTemplate = ({ children, location: { pathname } }) => {
+  const dispatch = useDispatch()
+
+  const handleRemoveAllClick = () => {
+    dispatch(removeAllDisableAction())
+  }
+
+  return (
+    <>
+      <header>
+        <Nav />
+        <h1
+          className={pathname === '/' ? null : 'd-inline-block align-middle mb-0'}
+        >
+          {pathname === '/' ? 'Currencies' : 'Favourites'}
+        </h1>
+        {pathname !== '/' ? (
+          <button
+            className="btn btn-danger btn-sm ml-3"
+            onClick={handleRemoveAllClick}
+            type="button"
+          >
+            Remove All
+          </button>
+        ) : null}
+      </header>
+      <main className="container">
+        {children}
+      </main>
+    </>
+  )
+}
 
 export default withRouter(MainTemplate)
 
