@@ -7,9 +7,9 @@ Technologies and tools I've used with this project:
 - Redux
 - Bootstrap
 
-Live: https://web-devvv.github.io/react-currencies-app/
+Live: https://DawidMaka.github.io/react-currencies-app/
 
-Src: https://github.com/web-deVVV/react-currencies-app/tree/master/src
+Src: https://github.com/DawidMaka/react-currencies-app/tree/master/src
 
 ## Description
 
@@ -22,9 +22,9 @@ Web user interface which connects with NBP web API (http://api.nbp.pl/). Applica
 
 ## Instalation 
 ```sh
-git clone https://github.com/web-deVVV/react-currencies-app [folder-name]
+git clone https://github.com/DawidMaka/react-currencies-app [folder-name]
 cd [folder-name]
-yarn install
+yarn/npm install
 ```
 
 ## Available Scripts
